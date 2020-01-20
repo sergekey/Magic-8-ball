@@ -1,0 +1,103 @@
+body {
+    margin-top: 10%;
+    box-sizing: border-box;
+    background-color: rgb(160, 121, 253);
+}
+
+html {
+    touch-action: manipulation;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.magic {
+    width: 300px;
+    height: 300px;
+    border: solid black 2px;
+    border-radius: 50%;
+    background-color: rgb(34, 11, 78);
+    animation-duration: 5s;
+    animation-name: emersion;
+    box-shadow: 0 0 20px white;
+}
+
+.magic-inner {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.magic-position {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.show-eight {
+    border: 0;
+    padding: 0;
+    outline: none;
+    font-size: 130px;
+    font-weight: bold;
+    color: black;
+}
+
+.show-eight:active {
+    animation-duration: 0.2s;
+    animation-name: earthquake;
+}
+
+@keyframes earthquake {
+    10% {
+        transform: translate(3px, 3px);
+    }
+    15% {
+        transform: translate(-5px, 0);
+    }
+    25% {
+        transform: translate(+5px, 0);
+    }
+    35% {
+        transform: translate(-3px, -3px);
+    }
+    50% {
+        transform: translate(0, 5px);
+    }
+    65% {
+        transform: translate(0, -5px);
+    }
+}
+
+.answer-block {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-top: 40px;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    display: none;
+    animation-duration: 10s;
+    animation-name: emersion;
+}
+
+@keyframes emersion {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+
+}
+

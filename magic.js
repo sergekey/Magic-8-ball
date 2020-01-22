@@ -1,13 +1,15 @@
 const btn = document.querySelector('#showEight');
 btn.onclick = showPrediction;
 function showPrediction() {
-    for (i = 0; i < answers.length; i++){
-        let randomValue = (Math.floor(Math.random()*answers.length));
-        let randomPrediction = answers[randomValue];
-        console.log(randomPrediction);
-        document.querySelector('.answer-block').style.display = 'block';
-        document.querySelector('.answer-block').innerHTML = randomPrediction;
-    }
+    setTimeout(function(){
+        for (i = 0; i < answers.length; i++){
+            let randomValue = (Math.floor(Math.random()*answers.length));
+            let randomPrediction = answers[randomValue];
+            console.log(randomPrediction);
+            document.querySelector('.answer-block').style.display = 'block';
+            document.querySelector('.answer-block').innerHTML = randomPrediction;
+        };
+    }, 1500);
 }
 const answers = [
     'It is certain (Бесспорно)',
